@@ -1,5 +1,4 @@
-.viber-container
-{
+.viber-container {
     position: fixed;
     bottom: 200px; 
     right: 30px;  
@@ -17,61 +16,10 @@
     transition: width 0.3s ease;
     z-index: 99999;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
-
-.viber-icon
-{
-    width: 40px;
-    height: 40px;
-    padding-bottom: 5px;
-}
-
-.chat-icon
-{
-    width: 0px;
-    height: 0px;
-}
-
-.group-icon
-{
-    width: 0px;
-    height: 0px;
-}
-
-.viber-container:hover
-{
-    width: 180px;
-}
-
-.viber-container:hover .chat-icon
-{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.viber-container:hover .group-icon
-{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
-
-.chat-icon:hover
-{
-    transform: translateY(-7px);
-}
-
-.group-icon:hover
-{
-    transform: translateY(-7px);
-}
-
-
-
-.telegram-container
-{
+.telegram-container {
     position: fixed;
     bottom: 115px; 
     right: 30px;  
@@ -89,41 +37,60 @@
     transition: width 0.3s ease;
     z-index: 99999;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
+.viber-icon {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+}
 
-.telegram-icon
-{
+.telegram-icon {
     width: 40px;
     height: 40px;
     padding-right: 4px;
 }
 
-.telegram-container:hover
-{
-    width: 180px;
+.chat-icon, .group-icon {
+    width: 0px;
+    height: 0px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
-.telegram-container:hover .group-icon
-{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
+@media (hover: hover) {
+    .viber-container:hover,
+    .telegram-container:hover {
+        width: 180px;
+    }
+
+    .viber-container:hover .chat-icon,
+    .viber-container:hover .group-icon,
+    .telegram-container:hover .chat-icon,
+    .telegram-container:hover .group-icon {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .chat-icon:hover,
+    .group-icon:hover {
+        transform: translateY(-7px);
+    }
 }
 
-.telegram-container:hover .chat-icon
-{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
+@media (hover: none) {
+    .viber-container:focus,
+    .telegram-container:focus {
+        width: 180px;
+    }
 
-.chat-icon:hover
-{
-    transform: translateY(-7px);
-}
-
-.group-icon:hover
-{
-    transform: translateY(-7px);
+    .viber-container:focus .chat-icon,
+    .viber-container:focus .group-icon,
+    .telegram-container:focus .chat-icon,
+    .telegram-container:focus .group-icon {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
 }
