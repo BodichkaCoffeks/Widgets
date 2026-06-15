@@ -1,65 +1,129 @@
-.contact-widget {
-    position: fixed;
-    bottom: 100px; 
-    right: 30px;  
-}
-
-
-
-.viber
+.viber-container
 {
+    position: fixed;
+    bottom: 200px; 
+    right: 30px;  
     display: flex;
-    margin-bottom: 30px;
-    justify-content: center;
     align-items: center;
-    background-color: #8e49c6;
+    justify-content: center;
     width: 60px;
     height: 60px;
+    background-color: #8e49c6;
     border-radius: 50px;
+    border: 5px #6d0abea8 solid;
     color: white;
     font-family: Arial;
     cursor: pointer;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: width 0.3s ease;
+    z-index: 99999;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.viber:hover
-{
-    box-shadow: 0px 0 45px 20px #5d1399;
-    transform: translateY(-5px);
-}
 
 .viber-icon
 {
-    width: 125px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.chat-icon
+{
+    width: 0px;
+    height: 0px;
+}
+
+.group-icon
+{
+    width: 0px;
+    height: 0px;
+}
+
+.viber-container:hover
+{
+    width: 180px;
+}
+
+.viber-container:hover .chat-icon
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.viber-container:hover .group-icon
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.chat-icon:hover
+{
+    transform: translateY(-7px);
+}
+
+.group-icon:hover
+{
+    transform: translateY(-7px);
 }
 
 
 
-.telegram
+.telegram-container
 {
+    position: fixed;
+    bottom: 115px; 
+    right: 30px;  
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #097ede;
+    justify-content: center;
     width: 60px;
     height: 60px;
+    background-color: #0088cc;
     border-radius: 50px;
+    border: 5px #0056a7 solid;
     color: white;
     font-family: Arial;
     cursor: pointer;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: width 0.3s ease;
+    z-index: 99999;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .telegram-icon
 {
-    width: 150px;
-    height: 75px;
+    width: 40px;
+    height: 40px;
+    padding-right: 4px;
 }
 
-.telegram:hover
+.telegram-container:hover
 {
-    box-shadow: 0px 0 45px 20px #029ff4;
-    transform: translateY(-5px);
+    width: 180px;
 }
 
+.telegram-container:hover .group-icon
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.telegram-container:hover .chat-icon
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.chat-icon:hover
+{
+    transform: translateY(-7px);
+}
+
+.group-icon:hover
+{
+    transform: translateY(-7px);
+}
